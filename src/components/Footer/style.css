@@ -1,0 +1,33 @@
+.footer-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2.2fr 1fr 1fr 20fr 2fr;
+}
+
+.footer-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--border-color);
+  text-align: center;
+  font-size: 16px;
+  height: 45px;
+  color: var(--text-light);
+}
+
+.footer-text,
+.icons {
+  cursor: pointer;
+}
+
+.footer-container div span:hover {
+  color: white;
+}
+.footer-container div:last-child {
+  border-right: none;
+}
+
+.footer-container div:first-child {
+  margin-left: 40px;
+  justify-content: start;
+}

@@ -1,0 +1,35 @@
+.navbar-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr 3fr 0.5fr;
+  border-bottom: 1px solid var(--border-color);
+  height: 60px;
+}
+
+.navbar-container div {
+  border-right: 1px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Override only for box-1 */
+.box-1 {
+  justify-content: flex-start !important;
+  padding-left: 20px;
+}
+.boxes span {
+  color: #ccc;
+}
+
+.boxes.active {
+  color: var(--text-dark);
+  border-bottom: 2px solid #e0a87b;
+}
+
+.boxes span:hover {
+  color: var(--text-dark);
+}

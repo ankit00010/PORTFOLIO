@@ -1,0 +1,130 @@
+:root {
+  --primary-bg: #0f172b;
+  --text-light: #f9fafb;
+  --text-dark: #111827;
+  --sidebar-bg: #f3f4f6;
+  --content-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --indigo-color: #615fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-bg: #0f172b;
+    --text-light: #f9fafb;
+    --text-dark: #f9fafb;
+    --grey-color: #a9a9a9;
+    --sidebar-bg: #374151;
+    --content-bg: #111827;
+    --border-color: #4b5563;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+body {
+  color: var(--text-dark);
+  background: var(--primary-bg);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "subheader subheader"
+    "sidebar content"
+    "footer footer";
+  grid-template-rows: 60px 40px 1fr 50px;
+  grid-template-columns: 255px 1fr;
+  height: 100vh;
+  max-height: 100vh;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  grid-area: header;
+  background: var(--primary-bg);
+  color: var(--text-light);
+}
+
+.subheader {
+  grid-area: subheader;
+  background: var(--primary-bg);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.875rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: var(--primary-bg);
+  padding: 1.5rem;
+  border-right: 1px solid var(--border-color);
+  color: var(--text-dark);
+  overflow-y: auto;
+}
+
+.content {
+  grid-area: content;
+  padding: 1.5rem;
+  background: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+.footer {
+  grid-area: footer;
+  background: var(--primary-bg);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.75rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-areas:
+      "header header"
+      "subheader subheader"
+      "sidebar sidebar"
+      "content content"
+      "footer footer";
+    grid-template-rows: 60px 40px auto 1fr 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    max-height: 200px;
+  }
+}

@@ -1,0 +1,33 @@
+.sub-header-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr 1.2fr;
+  height: 40px;
+}
+
+.main-file {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.sub-header-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--border-color);
+}
+.sub-header-container div:first-child {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.sub-header-currentfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
