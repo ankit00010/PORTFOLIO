@@ -1,0 +1,25 @@
+.content-container {
+  width: 100%;
+  display: flex;
+}
+
+.content-display {
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-light);
+  gap: 20px; /* Creates space between line numbers and content */
+  font-family: "Courier New", monospace;
+  white-space: pre-wrap; /* Ensures line breaks remain intact */
+}
+
+.line-numbers {
+  text-align: right;
+  padding-right: 10px;
+  user-select: none;
+  color: gray;
+  min-width: 30px; /* Ensures consistent spacing */
+}
+
+.code-content {
+  white-space: pre-wrap; /* Ensures long text wraps properly */
+}

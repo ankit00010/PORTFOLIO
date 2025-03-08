@@ -1,0 +1,77 @@
+.project-card {
+  width: 320px;
+  background-color: #0e1323;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+}
+.project-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-title {
+  color: #615fff;
+}
+
+.project-title span {
+  color: #78879e;
+}
+.project-image {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.icon-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Description Section */
+.project-info {
+  padding: 30px;
+  text-align: left;
+
+  background-color: #0e1323;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #cbd5e1;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.project-button {
+  padding: 9px 18px;
+  background: #64748b;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.project-button:hover {
+  background: #475569;
+}

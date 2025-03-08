@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Orbitron:wght@500&family=Space+Grotesk:wght@500&family=Roboto+Mono&family=Rajdhani:wght@500&family=Audiowide&family=Syncopate&family=Exo+2:wght@500&family=Chakra+Petch:wght@500&family=Nova+Square&display=swap");
 :root {
   --primary-bg: #0f172b;
   --text-light: #f9fafb;
@@ -90,9 +91,6 @@ body {
   grid-area: content;
   padding: 1.5rem;
   background: var(--primary-bg);
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center content horizontally */
   height: 100%;
   min-height: 0;
   overflow: hidden;
@@ -107,7 +105,6 @@ body {
   border-top: 1px solid var(--border-color);
   font-size: 0.75rem;
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

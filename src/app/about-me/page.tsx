@@ -1,6 +1,11 @@
+import AboutMeContainer from "@/containers/AboutContainer";
 import React from "react";
 const AboutMe = () => {
-  return <div>About Me</div>;
+  return (
+    <div>
+      <AboutMeContainer />
+    </div>
+  );
 };
 
 export default AboutMe;

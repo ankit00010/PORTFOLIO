@@ -12,7 +12,9 @@
   gap: 20px;
   cursor: pointer;
 }
-
+.cross-icon{
+  cursor: pointer;
+}
 .sub-header-container div {
   display: flex;
   justify-content: center;
