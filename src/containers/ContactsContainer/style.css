@@ -1,0 +1,208 @@
+/* Base container styling */
+.contactme-container {
+  display: flex;
+  width: 100%;
+  background-color: #101630;
+  color: #8f9cb3;
+  font-family: "Consolas", "Monaco", monospace;
+  position: relative;
+  height: 500px; /* Fixed height to enable scrolling */
+}
+
+/* Form section styling */
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  position: sticky;
+  top: 0;
+  height: fit-content;
+  min-width: 250px;
+  max-width: 600px;
+}
+
+form {
+  width: 100%;
+}
+
+.contactme-innercontainer {
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #8f9cb3;
+  font-size: 0.9rem;
+}
+
+.input-text {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0c1024;
+  border: 1px solid #1e263f;
+  border-radius: 4px;
+  color: #6a88c4;
+  font-family: "Consolas", "Monaco", monospace;
+}
+
+.input-text::placeholder {
+  color: #344068;
+}
+
+.message-area {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #3a51a3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Consolas", "Monaco", monospace;
+  margin-top: 1rem;
+  text-align: center;
+  width: 120px;
+}
+
+.submit-btn:hover {
+  background-color: #4a61b3;
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Vertical separator styling */
+.wall-section-vertical {
+  width: 1px;
+  background-color: #ffffff;
+  opacity: 0.1;
+}
+
+/* Code editor section styling - FIXED */
+.code-section {
+  flex: 0.6;
+  overflow: hidden;
+  height: 100%; /* Ensure it takes full height */
+}
+
+.code-editor {
+  height: 100%;
+  display: flex;
+  background-color: #0d1323;
+  overflow: auto; /* Simplified */
+}
+
+.line-numbers {
+  padding: 1.5rem 0.5rem;
+  text-align: right;
+  background-color: #0d1323;
+  color: #3d5086;
+  user-select: none;
+  min-width: 30px;
+  flex-shrink: 0;
+}
+
+.line-number {
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+.code-content {
+  flex: 1;
+  padding: 1.5rem 0.5rem;
+  overflow: visible; /* Allow content to be visible */
+}
+
+pre {
+  margin: 0;
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 0.9rem;
+  white-space: pre; /* Prevents text wrapping */
+  width: max-content; /* Ensures content expands properly */
+}
+
+code {
+  color: #e0e0e0;
+  display: block; /* Ensures code takes up the full width */
+}
+
+.code-line {
+  padding: 0.2rem 0;
+  white-space: pre;
+}
+
+/* Syntax highlighting */
+.keyword {
+  color: #c586c0;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.variable {
+  color: #9cdcfe;
+}
+
+.property {
+  color: #4ec9b0;
+}
+
+.method {
+  color: #dcdcaa;
+}
+
+.function {
+  color: #dcdcaa; /* Added missing style from your code */
+}
+
+.type {
+  color: #569cd6; /* Added missing style from your code */
+}
+
+.object {
+  color: #9cdcfe;
+}
+
+.operator {
+  color: #d4d4d4;
+}
+
+.comment {
+  color: #6a9955;
+}
+
+/* Form footer */
+.form-footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Scroll styling */
+.code-content::-webkit-scrollbar,
+.code-editor::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.code-content::-webkit-scrollbar-thumb,
+.code-editor::-webkit-scrollbar-thumb {
+  background: #344068;
+  border-radius: 4px;
+}
+
+.code-content::-webkit-scrollbar-track,
+.code-editor::-webkit-scrollbar-track {
+  background: #0d1323;
+}

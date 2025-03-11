@@ -1,13 +1,16 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import "./style.css";
 
 import AboutMeSidebar from "./AboutMeSidebar";
+import { AdminContext, AdminContextType } from "@/context/admin_context";
+import ProjectSidebar from "./ProjectSidebar";
 
 const SideBar = () => {
+  const { currentPath } = useContext(AdminContext) as AdminContextType;
   return (
     <div>
-      <AboutMeSidebar />
+      {currentPath === "/about-me" ? <AboutMeSidebar /> : <ProjectSidebar />}
     </div>
   );
 };

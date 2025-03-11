@@ -7,6 +7,9 @@ import React, {
 } from "react";
 import { usePathname } from "next/navigation";
 import { CurrentFileTypes } from "@/types/CurrentIndex_Types";
+import { DetailsState } from "@/types/Details_Types";
+import { ErrorState } from "@/types/ContactErrors_Types";
+import { fetchService } from "@/services/fetch_services";
 
 // Define the structure of the AdminContext
 export interface AdminContextType {
@@ -21,6 +24,16 @@ export interface AdminContextType {
   isCrossOpen: boolean; // Controls visibility of the close (cross) button
   setIsCrossOpen: React.Dispatch<SetStateAction<boolean>>; // Function to toggle close button
   setCurrentIndex: React.Dispatch<SetStateAction<CurrentFileTypes>>;
+
+  //Contact Me related Operations
+  details: DetailsState;
+  error: ErrorState;
+  handleDetailsChange: (
+    field: keyof DetailsState,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  setError: React.Dispatch<SetStateAction<ErrorState>>;
+  sendEmail: () => void;
 }
 
 // Create a context with a default value of null
@@ -36,6 +49,18 @@ const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     folderIndex: 0,
     subFolderIndex: 0,
   });
+  const [details, setDetails] = useState<DetailsState>({
+    _name: "",
+    _email: "",
+    _message: "",
+  });
+
+  const [error, setError] = useState<ErrorState>({
+    _name_error: "",
+    _email_error: "",
+    _message_error: "",
+  });
+
   // State to control the visibility of the close (cross) button
   const [isCrossOpen, setIsCrossOpen] = useState(false);
 
@@ -55,6 +80,53 @@ const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     setIsCrossOpen(true); // Show the close button
   };
 
+  const handleDetailsChange = (
+    field: keyof DetailsState,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const value = e.target.value;
+    setDetails((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+
+    // Clear the error when user starts typing
+    setError((prev) => ({
+      ...prev,
+      [`${field}_error`]: "",
+    }));
+  };
+
+  //Api Call To Send Me the Email
+
+  const sendEmail = async () => {
+    const date = new Date();
+
+    const formattedDate = date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    });
+
+    const response = await fetchService({
+      method: "POST",
+      endpoint: "/api/portfolio/send-email",
+      data: {
+        name: details._name,
+        email: details._email,
+        message: details._message,
+        date: formattedDate,
+      },
+    });
+
+    const result = await response.data;
+    if (result.code === 200) {
+      alert(result.message);
+    } else {
+      alert(result.message);
+    }
+  };
+
   // Context value to provide state and functions to child components
   const admin_context_value = {
     currentPath,
@@ -66,6 +138,13 @@ const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     collapseAll,
     currentIndex,
     setCurrentIndex,
+
+    //Contacts Related Operations
+    details,
+    error,
+    handleDetailsChange,
+    setError,
+    sendEmail,
   };
 
   return (

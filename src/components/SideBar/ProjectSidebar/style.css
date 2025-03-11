@@ -1,0 +1,28 @@
+.project-sidebar-container {
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 8px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+}
+.skill-name {
+  font-weight: 500;
+}
