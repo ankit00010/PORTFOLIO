@@ -37,7 +37,9 @@ const SubHeader = () => {
         </span>
       </div>
 
-      {isCrossOpen && (
+      {isCrossOpen &&
+      currentPath !== "/projects" &&
+      currentPath !== "/contact-me" ? (
         <div className="sub-header-currentfile">
           <span>{currentFile}</span>
 
@@ -48,7 +50,7 @@ const SubHeader = () => {
             <RxCross1 />
           </span>
         </div>
-      )}
+      ) : null}
     </div>
   );
 };
