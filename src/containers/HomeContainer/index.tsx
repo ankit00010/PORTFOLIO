@@ -16,7 +16,7 @@ const HomeContainer = () => {
 
         <div className="field-text-container">
           <MdOutlineKeyboardArrowRight size={24} className="field-icon" />
-          <span className="field-text">Backend Developer</span>
+          <span className="field-text">FullStack Developer</span>
         </div>
 
         <div className="home-info-sub">
