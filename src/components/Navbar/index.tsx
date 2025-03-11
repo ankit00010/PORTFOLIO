@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { navbarData } from "./constants";
 const Navbar = () => {
   const router = useRouter();
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(1);
 
   return (
     <div className="navbar-container">
