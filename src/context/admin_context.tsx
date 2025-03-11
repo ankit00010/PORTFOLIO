@@ -121,6 +121,11 @@ const AdminProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
     const result = await response.data;
     if (result.code === 200) {
+      setDetails({
+        _name: "",
+        _email: "",
+        _message: "",
+      });
       alert(result.message);
     } else {
       alert(result.message);
