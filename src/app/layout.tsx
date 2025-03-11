@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AXCEL",
-  description: "Admin CMS",
+  title: "Ankit Mishra | Full Stack Developer",
+  description: "Portfolio of Ankit Mishra, a Full Stack Developer specializing in backend development and modern web technologies.",
 };
+
 
 export default function RootLayout({
   children,
