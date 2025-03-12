@@ -28,7 +28,7 @@ const SubHeader = () => {
         <span>
           {currentPath === "/projects"
             ? "projects"
-            : currentPath === "/contacts"
+            : currentPath === "/contact-me"
             ? "contacts"
             : "personal-info"}
         </span>
