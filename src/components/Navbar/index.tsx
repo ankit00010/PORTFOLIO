@@ -25,8 +25,10 @@ const Navbar = () => {
           }`}
           key={index}
           onClick={() => {
-            router.push(`${data.link}`);
-            setActiveIndex(index);
+            if (data.isClickable) {
+              router.push(`${data.link}`);
+              setActiveIndex(index);
+            }
           }}
         >
           <span>{data.navBarname}</span>
