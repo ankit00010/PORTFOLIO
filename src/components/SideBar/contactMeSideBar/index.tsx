@@ -32,7 +32,7 @@ const ContactMeSideBar = () => {
     {
         name: "Twitter",
         icon: <FaXTwitter color="#E5E5E5" size={20} />,
-        link: "https://github.com/ankit00010",
+        link: "https://x.com/dev11_ankit",
       },
   ];
 

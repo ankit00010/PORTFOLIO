@@ -11,7 +11,10 @@ const Footer = () => {
       <div className="footer-text">
         <span>find me in : </span>
       </div>
-      <div className="icons">
+      <div
+        className="icons"
+        onClick={() => router.push("https://x.com/dev11_ankit")}
+      >
         <span>
           <FaXTwitter />
         </span>
