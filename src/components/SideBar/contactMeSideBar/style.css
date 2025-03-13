@@ -1,0 +1,29 @@
+.contact-sidebar-container {
+  border-radius: 10px;
+  width: 200px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 14px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: start;
+}
+.contact-names{
+  color: #ccc;
+  font-weight: 500;
+}

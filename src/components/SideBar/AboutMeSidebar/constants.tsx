@@ -130,8 +130,6 @@ export const folders: FolderItem[] = [
        * Certifications
        * - Completed "The Complete 2024 Web Development Bootcamp" from Udemy.
        * - Certificate: https://www.udemy.com/certificate/UC-2e3a7346-3483-4849-9e66-4fd49c10bb64/
-       * - Built a full-stack project as part of the course, gaining hands-on 
-       *   experience in modern web development.
       **/
 `,
     ],
