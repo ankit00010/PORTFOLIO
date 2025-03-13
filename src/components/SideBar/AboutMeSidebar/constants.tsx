@@ -123,7 +123,7 @@ export const folders: FolderItem[] = [
   {
     name: "certifications",
     color: "#734CA1",
-    subFolders: ["fullstack", "js"],
+    subFolders: ["fullstack"],
     subFolder_icon: <FaFilePdf />,
     context: [
       `      /**
