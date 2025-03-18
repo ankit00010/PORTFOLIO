@@ -14,7 +14,7 @@ const ProjectContainer = () => {
       image: prod1,
       product_des: "A logistics website connecting companies, clients, and owners. 🚀",
       btnlabel: "view-project",
-      project_link: "https://aal-logistics-website.vercel.app/",
+      project_link: "https://aalogistics.vercel.app/",
       title: "_logistic-website",
       icon: <FaReact size={30} />,
     },

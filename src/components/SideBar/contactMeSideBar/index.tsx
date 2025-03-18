@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { FaGithub, FaLinkedin,FaPhoneAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -30,10 +30,10 @@ const ContactMeSideBar = () => {
       link: "https://github.com/ankit00010",
     },
     {
-        name: "Twitter",
-        icon: <FaXTwitter color="#E5E5E5" size={20} />,
-        link: "https://x.com/dev11_ankit",
-      },
+      name: "Twitter",
+      icon: <FaXTwitter color="#E5E5E5" size={20} />,
+      link: "https://x.com/dev11_ankit",
+    },
   ];
 
   return (
